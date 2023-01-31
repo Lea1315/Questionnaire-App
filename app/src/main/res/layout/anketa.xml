@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#97CCC7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageCircle"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/plava"
+                app:civ_border_width="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/nazivAnkete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nazivAnkete" />
+
+            <TextView
+                android:id="@+id/nazivAnkete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Anketa 1"
+                android:textColor="#000000"
+                android:textColorHighlight="#0B0909"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nazivIstrazivanja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Istrazivanje broj 1"
+                android:textColor="#0B0909"
+                android:textSize="8sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nazivAnkete" />
+
+            <ProgressBar
+                android:id="@+id/progresZavrsetka"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:indeterminate="false"
+                android:progressTint="@android:color/holo_blue_dark"
+                android:scrollbarSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nazivIstrazivanja" />
+
+            <TextView
+                android:id="@+id/textDatuma"
+                android:layout_width="120sp"
+                android:layout_height="20sp"
+                android:background="#000000"
+                android:backgroundTint="#46829E"
+                android:gravity="center|center_horizontal"
+                android:text="Anketa uredjena 10.07.2000"
+                android:textColor="#0B0606"
+                android:textColorHighlight="#000000"
+                android:textColorHint="#000000"
+                android:textSize="7dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/progresZavrsetka"
+                app:layout_constraintStart_toStartOf="@+id/progresZavrsetka"
+                app:layout_constraintTop_toBottomOf="@+id/progresZavrsetka"
+                app:layout_constraintVertical_bias="0.20" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
